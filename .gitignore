@@ -1,0 +1,52 @@
+# Python and development caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Local credentials; only synthetic example files may be tracked
+.env
+.env.*
+!.env.example
+secrets.yaml
+secrets.yml
+*.pem
+*.key
+
+# Home Assistant runtime state and household configuration
+/ha-config/
+/homeassistant-config/
+.storage/
+configuration.yaml
+home-assistant.log*
+home-assistant_v2.db*
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Private project material: never commit to either remote
+/local/
+/private/
+/backups/
+/reports/
+/logs/
+/evidence/
+*.log
+*.bak
+
+# Editor and OS temporary files
+*.swp
+*.swo
+*~
+.DS_Store

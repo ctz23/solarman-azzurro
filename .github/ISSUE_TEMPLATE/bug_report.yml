@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a reproducible problem with Solarman Azzurro
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Check the supported profile and installation guide first. Share the integration diagnostics when available; remove private addresses, serials and credentials from any extra logs."
+  - type: input
+    id: integration_version
+    attributes:
+      label: Solarman Azzurro version
+    validations:
+      required: true
+  - type: input
+    id: ha_version
+    attributes:
+      label: Home Assistant version
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Inverter model and logger model
+      description: "Model names and firmware versions, without device serials."
+    validations:
+      required: true
+  - type: dropdown
+    id: setup
+    attributes:
+      label: Connection setup
+      options:
+        - Automatically suggested IP and serial
+        - Manual configuration
+        - Reconfigured existing entry
+  - type: input
+    id: polling
+    attributes:
+      label: Power/battery interval and other readings interval
+      description: "Default 10 and 30 seconds; both have a 1-second minimum. Increase intervals if timeouts or frequent reconnections occur. These values are also present in integration diagnostics."
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps, expected result and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics and sanitized logs
+      description: "Settings → Devices & services → Solarman Azzurro → Download diagnostics. Attach the JSON here, or describe why it is unavailable."

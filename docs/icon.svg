@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<title>Solarman Azzurro</title><desc>Sun, solar panel and energy bolt on an azure tile.</desc>
+<rect x="8" y="8" width="240" height="240" rx="52" fill="#007DAA"/>
+<g fill="none" stroke="#FFD45A" stroke-width="10" stroke-linecap="round">
+<circle cx="82" cy="77" r="23"/><path d="M82 36v-7m0 96v-7M41 77h-7m96 0h-7M53 48l-5-5m63 63 5 5M53 106l-5 5m63-63 5-5"/></g>
+<path d="M54 141h145l14 60H40z" fill="#064660" stroke="#EDF9FF" stroke-width="7" stroke-linejoin="round"/>
+<path d="M48 171h156m-107-30-7 60m59-60 7 60" fill="none" stroke="#B0E5F8" stroke-width="4"/>
+<path d="m171 47-45 73h28l-13 43 53-71h-31z" fill="#FFFFFF" stroke="#007DAA" stroke-width="4" stroke-linejoin="round"/>
+</svg>

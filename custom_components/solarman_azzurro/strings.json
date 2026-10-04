@@ -1,0 +1,231 @@
+{
+  "title": "Solarman Azzurro",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Solarman Azzurro — local",
+        "description": "HYD HP / Sofar G3 profile. Local discovery suggests the logger IP and numeric serial; confirm or enter them manually. Port 8899 is a default. The supported profile is checked before saving.",
+        "data": {
+          "name": "Device name",
+          "host": "Local IP address",
+          "logger_serial": "Numeric logger serial",
+          "port": "TCP port",
+          "scan_interval": "Power and battery interval (seconds)",
+          "full_scan_interval": "Counters, events and other readings interval (seconds)"
+        }
+      },
+      "select_logger": {
+        "title": "Choose a logger",
+        "description": "Several loggers were found. Choose the one connected to your inverter or use manual setup.",
+        "data": {
+          "logger": "Logger"
+        }
+      },
+      "reconfigure": {
+        "title": "Logger connection",
+        "description": "Update the host or port for the same logger. Its serial and entity IDs are retained. The new connection is validated before saving.",
+        "data": {
+          "host": "Local IP address",
+          "port": "TCP port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot read the local logger. Check the host, port and logger serial.",
+      "unsupported_profile": "The response does not match the supported HYD HP / Sofar G3 profile, or protocol validation failed.",
+      "required": "Enter a non-empty value.",
+      "full_interval_too_short": "Use an interval at least as long as the power interval."
+    },
+    "abort": {
+      "already_configured": "This logger is already configured. Use Reconfigure to update its host or port.",
+      "reconfigure_successful": "Connection updated and integration reloaded."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Local polling",
+        "data": {
+          "scan_interval": "Power and battery interval (seconds)",
+          "full_scan_interval": "Counters, events and other readings interval (seconds)"
+        },
+        "description": "Power and battery default to 10 seconds; other readings default to 30 seconds. Both accept 1–300 seconds. Other readings cannot use a shorter interval than power. Very short intervals may cause timeouts or reconnections; increase them if errors occur."
+      }
+    },
+    "error": {
+      "full_interval_too_short": "Use an interval at least as long as the power interval."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "stato": {
+        "name": "Status"
+      },
+      "potenza_prodotta": {
+        "name": "Solar production power"
+      },
+      "potenza_consumata": {
+        "name": "Consumption power"
+      },
+      "potenza_autoconsumata": {
+        "name": "Self-consumption power"
+      },
+      "potenza_importata": {
+        "name": "Grid import power"
+      },
+      "potenza_esportata": {
+        "name": "Grid export power"
+      },
+      "potenza_carica": {
+        "name": "Battery charging power"
+      },
+      "potenza_scarica": {
+        "name": "Battery discharging power"
+      },
+      "potenza_rete": {
+        "name": "Grid power (positive import)"
+      },
+      "potenza_batteria": {
+        "name": "Battery power (positive discharge)"
+      },
+      "potenza_dc": {
+        "name": "DC string 1 power"
+      },
+      "potenza_pv1": {
+        "name": "PV1 power"
+      },
+      "potenza_pv2": {
+        "name": "PV2 power"
+      },
+      "energia_prodotta_oggi": {
+        "name": "Solar production today"
+      },
+      "totale_energia_prodotta": {
+        "name": "Total solar production"
+      },
+      "energia_consumata_oggi": {
+        "name": "Consumption today"
+      },
+      "totale_energia_consumata": {
+        "name": "Total consumption"
+      },
+      "energia_importata_oggi": {
+        "name": "Grid import today"
+      },
+      "totale_energia_importata": {
+        "name": "Total grid import"
+      },
+      "energia_esportata_oggi": {
+        "name": "Grid export today"
+      },
+      "totale_energia_esportata": {
+        "name": "Total grid export"
+      },
+      "energia_carica_oggi": {
+        "name": "Battery charge today"
+      },
+      "totale_energia_carica": {
+        "name": "Total battery charge"
+      },
+      "energia_scarica_oggi": {
+        "name": "Battery discharge today"
+      },
+      "totale_energia_scarica": {
+        "name": "Total battery discharge"
+      },
+      "energia_autoconsumata_oggi": {
+        "name": "Self-consumption today (estimated)"
+      },
+      "totale_enegia_autoconsumata": {
+        "name": "Total self-consumption (estimated)"
+      },
+      "batteria": {
+        "name": "Battery"
+      },
+      "salute_batteria": {
+        "name": "Battery health (BMS)"
+      },
+      "temperatura_inverter": {
+        "name": "Inverter temperature"
+      },
+      "temperatura_ambiente": {
+        "name": "Inverter ambient temperature"
+      },
+      "temperatura_batteria": {
+        "name": "Battery temperature"
+      },
+      "tensione_rete": {
+        "name": "Grid voltage"
+      },
+      "tensione_batteria": {
+        "name": "Battery voltage"
+      },
+      "voltaggio_dc": {
+        "name": "DC string 1 voltage"
+      },
+      "tensione_pv1": {
+        "name": "PV1 voltage"
+      },
+      "tensione_pv2": {
+        "name": "PV2 voltage"
+      },
+      "corrente_dc": {
+        "name": "DC string 1 current"
+      },
+      "corrente_pv1": {
+        "name": "PV1 current"
+      },
+      "corrente_pv2": {
+        "name": "PV2 current"
+      },
+      "corrente_batteria": {
+        "name": "Battery current (positive charge)"
+      },
+      "frequenza_rete": {
+        "name": "Grid frequency"
+      },
+      "stato_inverter": {
+        "name": "Inverter state"
+      },
+      "codici_allarme": {
+        "name": "Inverter event codes"
+      },
+      "messaggi_inverter": {
+        "name": "Inverter messages"
+      },
+      "errori_inverter": {
+        "name": "Inverter faults"
+      },
+      "protezioni_inverter": {
+        "name": "Inverter protections"
+      },
+      "numero_errori": {
+        "name": "Inverter fault count"
+      },
+      "flusso_batteria": {
+        "name": "Battery flow"
+      },
+      "flusso_rete": {
+        "name": "Grid flow"
+      },
+      "ultimo_aggiornamento_locale": {
+        "name": "Last local update"
+      }
+    },
+    "binary_sensor": {
+      "collegamento_locale": {
+        "name": "Local connection"
+      },
+      "allarme_inverter": {
+        "name": "Inverter alarm"
+      }
+    }
+  },
+  "selector": {
+    "logger": {
+      "options": {
+        "manual": "Manual setup"
+      }
+    }
+  }
+}

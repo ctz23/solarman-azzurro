@@ -1,0 +1,17 @@
+{
+  "domain": "solarman_azzurro",
+  "name": "Solarman Azzurro",
+  "after_dependencies": [
+    "network"
+  ],
+  "codeowners": [
+    "@ctz23"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/ctz23/solarman-azzurro",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/ctz23/solarman-azzurro/issues",
+  "requirements": [],
+  "version": "0.1.6"
+}
